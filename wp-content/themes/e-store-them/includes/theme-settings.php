@@ -32,13 +32,6 @@ if ( ! function_exists( 'estore_setup' ) ) :
             */
         add_theme_support( 'post-thumbnails' );
 
-        // This theme uses wp_nav_menu() in one location.
-        register_nav_menus(
-            array(
-                'menu-1' => esc_html__( 'Primary', 'estore' ),
-            )
-        );
-
         /*
             * Switch default core markup for search form, comment form, and comments
             * to output valid HTML5.
@@ -56,17 +49,6 @@ if ( ! function_exists( 'estore_setup' ) ) :
             )
         );
 
-        // Set up the WordPress core custom background feature.
-        add_theme_support(
-            'custom-background',
-            apply_filters(
-                'estore_custom_background_args',
-                array(
-                    'default-color' => 'ffffff',
-                    'default-image' => '',
-                )
-            )
-        );
 
         // Add theme support for selective refresh for widgets.
         add_theme_support( 'customize-selective-refresh-widgets' );
@@ -85,5 +67,31 @@ if ( ! function_exists( 'estore_setup' ) ) :
                 'flex-height' => true,
             )
         );
+
+        add_theme_support(
+            'woocommerce',
+            array(
+                'thumbnail_image_width' => 150,
+                'single_image_width'    => 300,
+                'product_grid'          => array(
+                    'default_rows'    => 3,
+                    'min_rows'        => 1,
+                    'default_columns' => 4,
+                    'min_columns'     => 1,
+                    'max_columns'     => 6,
+                ),
+            )
+        );
+        add_theme_support( 'wc-product-gallery-zoom' );
+        add_theme_support( 'wc-product-gallery-lightbox' );
+        add_theme_support( 'wc-product-gallery-slider' );
+    
     }
 endif;
+
+function estore_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'estore_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'estore_content_width', 0 );
+
+
