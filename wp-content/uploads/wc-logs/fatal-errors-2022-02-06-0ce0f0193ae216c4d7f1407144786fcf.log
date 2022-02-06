@@ -1,2 +1,10 @@
 2022-02-06T13:09:39+00:00 CRITICAL Maximum execution time of 60 seconds exceeded в C:\OpenServer\domains\store\wp-content\plugins\woocommerce\includes\wc-user-functions.php на строке 411
 
+2022-02-06T15:58:09+00:00 CRITICAL require(): Failed opening required 'C:\OpenServer\domains\store/wp-content/themes/e-store-them/inc/custom-header.php' (include_path='.') в C:\OpenServer\domains\store\wp-content\themes\e-store-them\functions.php на строке 26
+
+2022-02-06T15:58:31+00:00 CRITICAL require(): Failed opening required 'C:\OpenServer\domains\store/wp-content/themes/e-store-them/inc/custom-header.php' (include_path='.') в C:\OpenServer\domains\store\wp-content\themes\e-store-them\functions.php на строке 26
+
+2022-02-06T16:01:25+00:00 CRITICAL require(): Failed opening required 'C:\OpenServer\domains\store/wp-content/themes/e-store-them/inc/custom-header.php' (include_path='.') в C:\OpenServer\domains\store\wp-content\themes\e-store-them\functions.php на строке 26
+
+2022-02-06T16:01:40+00:00 CRITICAL require(): Failed opening required 'C:\OpenServer\domains\store/wp-content/themes/e-store-them/inc/custom-header.php' (include_path='.') в C:\OpenServer\domains\store\wp-content\themes\e-store-them\functions.php на строке 26
+
